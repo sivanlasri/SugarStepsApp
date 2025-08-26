@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">SugarSteps</string>
+    <string name="welcome">ברוכים הבאים לSugarSteps!</string>
+    <string name="username">שם המשתמש</string>
+    <string name="guide">מדריך</string>
+    <string name="job">מה תפקידך?</string>
+    <string name="student">תלמיד</string>
+    <string name="declaration_title">הצהרת אחריות</string>
+    <string name="lets_go">צא/י לדרך!</string>
+
+    <string name="settings_header">הגדרות</string>
+    <string name="settings_icon">אייקון הגדרות</string>
+    <string name="setting_job">תפקידך:</string>
+    <string name="level_head">רמה:</string>
+    <string name="phone">טלפון:</string>
+    <string name="hint_phone">הכנס מספר טלפון</string>
+    <string name="age_header">גיל:</string>
+    <string name="age_hint">הכנס גיל</string>
+    <string name="gender_header">מין:</string>
+    <string name="dec_header">הצהרת אחריות</string>
+    <string name="res_dec">
+    השימוש באפליקציה נעשה <b>באחריות המשתמש בלבד</b>.
+    אנו עושים מאמצים לספק תכנים מדויקים, ברורים ומהנים, אך <i>אין לראות בהם ייעוץ מקצועי.</i>
+    האפליקציה <b>אינה אחראית</b> לכל נזק, פציעה, תקלה או תגובה (למשל אלרגית) <i>שעלולים להיגרם</i> בעקבות שימוש במתכונים או בטכניקות המוצגות.
+    משתמשים מתבקשים <b>להפעיל שיקול דעת</b>, לנקוט באמצעי זהירות נדרשים, ולהתאים את החומרים וההנחיות לצרכים האישיים ולתנאים במטבח.
+</string>
+    <string name="approve">אישור</string>
+    <string name="cancel">ביטול</string>
+    <string name="do_you_agree">האם את/ה מסכימ/ה?</string>
+    <string name="note_no_pass">אין אפשרות להמשיך לאפליקציה ללא אישור</string>
+    <string name="save">שמירה</string>
+    <string name="beginner">מתחילים</string>
+    <string name="advanced">מתקדמים</string>
+    <string name="expert">מומחים</string>
+    <string name="hello_user">שלום, שם המשתמש!</string>
+    <string name="add_edit_lesson">הוספת/עריכת שיעור</string>
+    <string name="lesson_name">שם השיעור</string>
+    <string name="guide_name">שם המדריך/ה</string>
+    <string name="short_desc">תיאור קצר</string>
+    <string name="select_level">בחירת רמה:</string>
+    <string name="add_photo">להוספת תמונה לשיעור:</string>
+    <string name="add">הוספה</string>
+    <string name="add_video_lesson">להוספת סרטון השיעור</string>
+    <string name="add_long_desc">להוספת תיאור השיעור</string>
+    <string name="level">רמה:</string>
+    <string name="lesson_view_temp">תצוגת שיעור</string>
+    <string name="lesson_name_view">שם השיעור</string>
+    <string name="lesson_guide_view">שם המדריך/ה</string>
+    <string name="gender_male">זכר</string>
+    <string name="gender_female">נקבה</string>
+    <string name="loading">טוען...</string>
+    <string name="app_logo">App Logo</string>
+    <string name="lesson_check">סמן כשסיימת -> </string>
+    <string name="lesson_done">בוצע!</string>
+    <string name="welcome_msg_guide">
+    הנך נמצא במערכת ניהול שיעורים,\nהשיעורים מסודרים לפי רמות קושי.\n<b>ללמידת שיעור</b> - <b>לחץ</b> או <b>לחצי</b> לחיצה קצרה על השיעור הרצוי.\n<b>לעריכת שיעור</b> - <b>לחץ</b> או <b>לחצי</b> לחיצה ארוכה על השיעור.\n<b>למחיקת שיעור</b> - <b>החלק</b> או <b>החליקי</b> ימינה או שמאלה.\n<b>להצגת ההסבר שוב</b> - <b>לחץ</b> או <b>לחצי</b> על כפתור המידע i.
+    </string>
+
+    <string name="welcome_msg_student">
+    לפניך מערכת ניהול השיעורים.\nכאן תוכל לעיין בשיעורים לפי רמות קושי שונות.\n<b>ללמידת שיעור</b> - <b>לחץ</b> או <b>לחצי</b> לחיצה קצרה על השיעור הרצוי,\nוהמערכת תפתח אותו עבורך לצפייה נוחה ונעימה.\n<b>להצגת ההסבר שוב</b> - לחץ/י על כפתור ה־<b>i</b> בפינה העליונה.
+    </string>
+    <string name="choose_back">בחירת רקע:</string>
+
+
+    <string-array name="levels">
+        <item>מתחילים</item>
+        <item>מתקדמים</item>
+        <item>מומחים</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>נקבה</item>
+        <item>זכר</item>
+    </string-array>
+</resources>

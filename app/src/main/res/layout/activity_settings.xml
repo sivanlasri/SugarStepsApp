@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background1"
+    tools:context=".user.SettingsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_settings"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:layoutDirection="rtl"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetStartWithNavigation="0dp"
+        android:contentInsetEndWithActions="0dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layoutDirection="rtl"
+            android:paddingEnd="0dp">
+
+            <ImageButton
+                android:id="@+id/imgbtn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="-8dp"
+                android:background="@null"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/tx_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center_vertical"
+                android:text="@string/settings_header"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/settings_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/buttons_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/level_choice_raw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_content">
+
+            <TextView
+                android:id="@+id/tx_role_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="@string/setting_job"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_guide_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_role"
+                android:fontFamily="@font/inter"
+                android:gravity="center_vertical|end"
+                android:layoutDirection="rtl"
+                android:stateListAnimator="@null"
+                android:text="@string/guide"
+                android:textAlignment="viewEnd"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_teacher"
+                app:iconGravity="textStart"
+                app:iconPadding="4dp"
+                app:iconSize="23dp"
+                app:iconTint="@null" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_student_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_role"
+                android:fontFamily="@font/inter"
+                android:gravity="center_vertical|end"
+                android:layoutDirection="rtl"
+                android:stateListAnimator="@null"
+                android:text="@string/student"
+                android:textAlignment="viewEnd"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_student"
+                app:iconGravity="textStart"
+                app:iconPadding="4dp"
+                app:iconSize="23dp"
+                app:iconTint="@null" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/level_choice_raw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/phone_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttons_row">
+
+            <ImageView
+                android:id="@+id/imgv_level_ic"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_select_level" />
+
+            <TextView
+                android:id="@+id/tx_level_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="@string/level_head"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_level"
+                android:layout_width="164dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="45dp"
+                android:background="@drawable/custom_spinner_layout"
+                android:entries="@array/levels"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/age_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/level_choice_raw">
+
+            <ImageView
+                android:id="@+id/imgv_phone_ic"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_phone" />
+
+
+            <TextView
+                android:id="@+id/tx_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="@string/phone"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_phone_input"
+                android:layout_width="164dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/input"
+                android:hint="@string/hint_phone"
+                android:inputType="phone"
+                android:padding="6dp"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/age_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/gender_choice_raw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_header">
+
+            <ImageView
+                android:id="@+id/imgv_age_ic"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_age" />
+
+
+            <TextView
+                android:id="@+id/tx_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="@string/age_header"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+
+                android:id="@+id/edt_age_input"
+                android:layout_width="164dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="60dp"
+                android:background="@drawable/input"
+                android:hint="@string/age_hint"
+                android:inputType="number"
+                android:padding="6dp"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gender_choice_raw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/logo_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/age_header">
+
+            <ImageView
+                android:id="@+id/imgv_gender_ic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_gender" />
+
+
+            <TextView
+                android:id="@+id/tx_gender_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="@string/gender_header"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_gender"
+                android:layout_width="164dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="54dp"
+                android:background="@drawable/custom_second_spinner"
+                android:entries="@array/gender"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/background_choice_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_back"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginEnd="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_background1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_background1"
+                android:text="רקע 1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                app:backgroundTint="@null"
+                app:rippleColor="@android:color/white"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"
+                android:textStyle="bold"
+                android:stateListAnimator="@null" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_background2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/btn_background2"
+                android:text="רקע 2"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:insetLeft="0dp"
+                android:insetRight="0dp"
+                app:backgroundTint="@null"
+                app:rippleColor="@android:color/white"
+                app:strokeWidth="2dp"
+                app:strokeColor="@color/black"
+                android:textStyle="bold"
+                android:stateListAnimator="@null" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/save_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_save_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background_approve"
+                android:fontFamily="@font/inter"
+                android:gravity="center_vertical|start"
+                android:layoutDirection="rtl"
+                android:stateListAnimator="@null"
+                android:text="@string/save"
+                android:textAlignment="viewStart"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_save"
+                app:iconGravity="textEnd"
+                app:iconPadding="4dp"
+                app:iconSize="23dp"
+                app:iconTint="@null" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cancel_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_background_cancel"
+                android:fontFamily="@font/inter"
+                android:gravity="center_vertical|start"
+                android:layoutDirection="rtl"
+                android:stateListAnimator="@null"
+                android:text="@string/cancel"
+                android:textAlignment="viewStart"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_cancel"
+                app:iconGravity="textEnd"
+                app:iconPadding="4dp"
+                app:iconSize="23dp"
+                app:iconTint="@null" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

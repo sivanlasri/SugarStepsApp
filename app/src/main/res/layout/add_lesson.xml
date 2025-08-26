@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_edit_lesson"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:layoutDirection="rtl"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetStartWithNavigation="0dp"
+        android:contentInsetEndWithActions="0dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layoutDirection="rtl"
+            android:paddingEnd="0dp"
+            android:layout_marginEnd="0dp">
+
+            <ImageButton
+                android:id="@+id/imgbtn_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="-8dp"
+                android:background="@null"
+                android:padding="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:id="@+id/app_name_header"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center_vertical"
+                android:text="@string/add_edit_lesson"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalScrollbarPosition="right"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/add_edit_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lesson_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imgbtn_add_photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/display_photo_shape"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_camera_add" />
+
+                <EditText
+                    android:id="@+id/et_lesson_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input"
+                    android:hint="@string/lesson_name"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/short_lesson_desc_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_lesson_short_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/input"
+                    android:hint="@string/short_desc"
+                    android:inputType="text"
+                    android:padding="6dp"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/guide_name_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_guide_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input"
+                    android:hint="@string/guide_name"
+                    android:padding="6dp"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tx_level_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="3dp"
+                    android:background="@color/yellow_pastel"
+                    android:fontFamily="@font/inter"
+                    android:gravity="right"
+                    android:text="@string/level"
+                    android:textColor="@color/dark_peach"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner_level"
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_spinner_layout"
+                    android:entries="@array/levels"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_desc_video_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_add"
+                    android:fontFamily="@font/inter"
+                    android:text="@string/add_video_lesson"
+                    android:layoutDirection="ltr"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textDirection="rtl"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_video_add"
+                    app:iconGravity="textStart"
+                    app:iconSize="23dp"
+                    app:iconPadding="8dp" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/video_present"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/peach"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <VideoView
+                    android:id="@+id/video_preview"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/add_desc_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_add_long_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_add"
+                    android:fontFamily="@font/inter"
+                    android:stateListAnimator="@null"
+                    android:text="@string/add_long_desc"
+                    android:layoutDirection="ltr"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_desc_add"
+                    app:iconGravity="textStart"
+                    app:iconPadding="8dp"
+                    app:iconSize="23dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/text_present"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/peach"
+                android:padding="8dp">
+
+                <ScrollView
+                    android:id="@+id/scrl_desc_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@color/peach"
+                    android:layoutDirection="rtl"
+                    android:verticalScrollbarPosition="right"
+                    android:fillViewport="true"
+                    android:scrollbars="vertical">
+
+                    <TextView
+                        android:id="@+id/tx_lesson_long_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="8dp"
+                        android:textSize="16sp" />
+                </ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/buttons_save_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save_lesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_background_approve"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center_vertical|start"
+                    android:layoutDirection="rtl"
+                    android:stateListAnimator="@null"
+                    android:text="@string/save"
+                    android:textAlignment="viewStart"
+                    android:textDirection="rtl"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_save"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="4dp"
+                    app:iconSize="23dp"
+                    app:iconTint="@null" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cancel_lesson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_background_cancel"
+                    android:fontFamily="@font/inter"
+                    android:gravity="center_vertical|start"
+                    android:layoutDirection="rtl"
+                    android:stateListAnimator="@null"
+                    android:text="@string/cancel"
+                    android:textAlignment="viewStart"
+                    android:textDirection="rtl"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/ic_cancel"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="4dp"
+                    app:iconSize="23dp"
+                    app:iconTint="@null" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
