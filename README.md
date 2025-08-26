@@ -18,7 +18,7 @@ The app includes two user roles:
 - Room / SQLite (for data storage)  
 
 ## Installation
-Download the latest APK from the [Releases page](https://github.com/your-username/SugarSteps/releases)  
+Download the latest APK from the [Releases page](https://github.com/sivanlasri/SugarSteps/releases)  
 and install it on your Android device.  
 _Note: You may need to enable installation from unknown sources in your device settings._  
 
