@@ -2,8 +2,8 @@
 
 **SugarSteps** is an Android app for learning cooking by levels (easy, medium, hard).  
 The app includes two user roles:  
-- **Student** – can view lessons.  
-- **Instructor** – can add, edit, and delete lessons.  
+- **Student** - can view lessons.  
+- **Instructor** - can add, edit, and delete lessons.  
 
 ## Features
 - 📚 Cooking lessons organized by difficulty levels  
